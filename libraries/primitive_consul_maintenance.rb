@@ -47,9 +47,9 @@ module Choregraphie
     def maintenance(enable = true) # rubocop:disable Style/OptionalBooleanParameter
       token = @options[:consul_token]
       if @options.key?(:service_id)
-        Diplomat::Service.maintenance(@options[:service_id], { enable: enable, reason: @options[:reason], token: token })
+        Diplomat::Service.maintenance(@options[:service_id], { enable:, reason: @options[:reason], token: })
       else
-        Diplomat::Maintenance.enable(enable, @options[:reason], { token: token })
+        Diplomat::Maintenance.enable(enable, @options[:reason], { token: })
       end
     end
 

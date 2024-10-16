@@ -41,7 +41,7 @@ describe Choregraphie::ConsulMaintenance do
     let(:service_id) { 'service_test' }
     let(:choregraphie) do
       Choregraphie::Choregraphie.new('test') do
-        consul_maintenance service_id: service_id, reason: 'Testing', consul_token: 'foo', check_interval: 0
+        consul_maintenance service_id:, reason: 'Testing', consul_token: 'foo', check_interval: 0
       end
     end
 
